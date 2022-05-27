@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project01", "Project01", "{D8D69E15-348B-4373-A4A4-A3983140654B}"
+	ProjectSection(SolutionItems) = preProject
+		Guide.md = Guide.md
+		Pro01_Readme.md = Pro01_Readme.md
+		Specs.md = Specs.md
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pro01_20CT111", "Project01\Pro01_20CT111\Pro01_20CT111.csproj", "{80105CFC-AD17-49EF-A113-73E67D2007DD}"
 EndProject
