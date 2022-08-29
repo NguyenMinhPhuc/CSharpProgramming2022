@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pro01_20CT112_113.BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace Pro01_20CT112_113
         public FrmDangNhap()
         {
             InitializeComponent();
+
+        }
+        BLLUser bd;
+
+        private void FrmDangNhap_Load(object sender, EventArgs e)
+        {
+            bd = new BLLUser(string.Format(@"{0}\Users.ini",Application.StartupPath));
         }
         /// <summary>
         /// Button thoát, để đóng chương trình
@@ -70,9 +78,8 @@ namespace Pro01_20CT112_113
         /// <returns>true nếu trùng, false không trùng</returns>
         private bool KiemTraDangNhap(string taiKhoan, string matKhau)
         {
-            if (taiKhoan == "admin" && matKhau == "admin")
-                return true;
-            return false;
+            return bd.KiemTraTaiKhoan(taiKhoan, matKhau);
+             
         }
         bool trangThaiDongForm = false;
         private void FrmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
@@ -82,5 +89,7 @@ namespace Pro01_20CT112_113
             else
                 e.Cancel = true;//không cho phép đóng form
         }
+
+       
     }
 }
