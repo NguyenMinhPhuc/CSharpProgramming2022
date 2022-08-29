@@ -36,6 +36,7 @@ namespace Pro01_20CT114
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -85,7 +86,7 @@ namespace Pro01_20CT114
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(164, 219);
+            this.btnDangNhap.Location = new System.Drawing.Point(164, 260);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(187, 45);
             this.btnDangNhap.TabIndex = 5;
@@ -103,6 +104,16 @@ namespace Pro01_20CT114
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(164, 219);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(149, 33);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // FrmLogin
             // 
             this.AcceptButton = this.btnDangNhap;
@@ -110,6 +121,7 @@ namespace Pro01_20CT114
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(641, 341);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtMatKhau);
@@ -139,5 +151,6 @@ namespace Pro01_20CT114
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

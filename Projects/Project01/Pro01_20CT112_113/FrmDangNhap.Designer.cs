@@ -55,7 +55,7 @@ namespace Pro01_20CT112_113
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(126, 183);
+            this.btnDangNhap.Location = new System.Drawing.Point(126, 182);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(152, 43);
             this.btnDangNhap.TabIndex = 2;
@@ -95,6 +95,7 @@ namespace Pro01_20CT112_113
             // 
             // btnThoat
             // 
+            this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnThoat.Location = new System.Drawing.Point(334, 182);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(152, 43);
@@ -119,10 +120,11 @@ namespace Pro01_20CT112_113
             this.Controls.Add(this.txtTaiKhoan);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "FrmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDangNhap_FormClosing);
+            this.Load += new System.EventHandler(this.FrmDangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
