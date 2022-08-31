@@ -35,5 +35,11 @@ namespace Pro01_20CT111
         {
             Application.Exit();
         }
+
+        private void mnuQuanLyTaiKhoan_Click(object sender, EventArgs e)
+        {
+            FrmQuanLyTaiKhoan_Main frmQuanLyTaiKhoan_Main = new FrmQuanLyTaiKhoan_Main();
+            frmQuanLyTaiKhoan_Main.ShowDialog();
+        }
     }
 }

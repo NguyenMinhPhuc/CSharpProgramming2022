@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pro01_20CT111.BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,7 @@ namespace Pro01_20CT111
                     {
                         trangThaiDongForm = true;
                         ClsMain.taiKhoan = txtTaiKhoan.Text;
+                        ClsMain.users = bd.GetUsers();//Lay ds users trong bien toan cuc
                         this.Close();//đóng form login
                     }
                     else
@@ -51,12 +53,20 @@ namespace Pro01_20CT111
             }
             
         }
-
+        BLLUser bd;
+        string err = string.Empty;
+       
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            bd = new BLLUser(ref err,ClsMain.path);
+        }
         private bool KiemTraDangNhap(string taiKhoan, string matKhau)
         {
-            if (taiKhoan.Equals("admin") && matKhau.Equals("admin"))
-                return true;
-            return false;
+            return bd.KiemTraUser(taiKhoan, matKhau);
+
+            //if (taiKhoan.Equals("admin") && matKhau.Equals("admin"))
+            //    return true;
+            //return false;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
