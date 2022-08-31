@@ -46,7 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\BLLUser.cs" />
     <Compile Include="ClsMain.cs" />
+    <Compile Include="DataLayer\Database.cs" />
+    <Compile Include="DataLayer\User.cs" />
+    <Compile Include="DataLayer\UserDao.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +63,18 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmQuanLyTaiKhoan_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyTaiKhoan_Main.Designer.cs">
+      <DependentUpon>FrmQuanLyTaiKhoan_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyTaiKhoan_Modified.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyTaiKhoan_Modified.Designer.cs">
+      <DependentUpon>FrmQuanLyTaiKhoan_Modified.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
@@ -66,6 +82,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyTaiKhoan_Main.resx">
+      <DependentUpon>FrmQuanLyTaiKhoan_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyTaiKhoan_Modified.resx">
+      <DependentUpon>FrmQuanLyTaiKhoan_Modified.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,5 +111,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

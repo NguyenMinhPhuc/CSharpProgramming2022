@@ -30,14 +30,14 @@ namespace Pro01_20CT112_113.DataLayer
                         if (!string.IsNullOrEmpty(line))
                         {
                             user = new User();//khoi tao mot user
-                            users.Add(user.DocUser(line));
-                            //string[] mang = line.Split(',');
-                            //user.ID =Convert.ToInt32( mang[0]);
-                            //user.TaiKhoan =mang[1];
-                            //user.MatKhau = mang[2];
-                            //user.HoVaTen = mang[3];
-                            //user.NhoMatKhau = Convert.ToBoolean(mang[4]);
-                            //users.Add(user);//Them user vao danh sach
+                                              // users.Add(user.DocUser(line));
+                            string[] mang = line.Split(',');
+                            user.ID = Convert.ToInt32(mang[0]);
+                            user.TaiKhoan = mang[1];
+                            user.MatKhau = mang[2];
+                            user.HoVaTen = mang[3];
+                            user.NhoMatKhau = Convert.ToBoolean(mang[4]);
+                            users.Add(user);//Them user vao danh sach
                         }
                     }
                 }
