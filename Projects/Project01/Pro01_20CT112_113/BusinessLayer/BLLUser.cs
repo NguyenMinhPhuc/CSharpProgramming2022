@@ -27,5 +27,15 @@ namespace Pro01_20CT112_113.BusinessLayer
             }
             return false;
         }
+
+        public List<User> GetUsers()
+        {
+            return userDao.GetUsers();
+        }
+
+        public bool GhiUser(string path, List<User> users)
+        {
+            return userDao.GhiUser(path, users);
+        }
     }
 }

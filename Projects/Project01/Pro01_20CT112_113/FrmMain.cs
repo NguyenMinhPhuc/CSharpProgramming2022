@@ -46,5 +46,11 @@ namespace Pro01_20CT112_113
         {
             this.Close();
         }
+
+        private void mnuQuanLyNguoiDung_Click(object sender, EventArgs e)
+        {
+            FrmQuanLyUser_Main frmQuanLyUser_Main = new FrmQuanLyUser_Main();
+            frmQuanLyUser_Main.ShowDialog();
+        }
     }
 }
