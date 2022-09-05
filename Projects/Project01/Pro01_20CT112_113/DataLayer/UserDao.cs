@@ -26,11 +26,19 @@ namespace Pro01_20CT112_113.DataLayer
             listUser = new List<User>();
             docGhi = new DocGhiFile(path);
             listUser = docGhi.DocUser();
-
-
         }
 
         //Thuc hiện các phương thức
+        //Lấy danh sách User 
+        public List<User> GetUsers()
+        {
+            return docGhi.DocUser();
+        }
+        //Ghi file
+        public bool GhiUser(string path, List<User> users)
+        {
+            return docGhi.GhiFile(path, users);
+        }
         //Thêm
 
         //Sửa

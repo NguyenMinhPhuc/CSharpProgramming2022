@@ -48,6 +48,7 @@ namespace Pro01_20CT112_113
                     {
                         trangThaiDongForm = true;
                         ClsMain.taiKhoan = txtTaiKhoan.Text;
+                        ClsMain.users = bd.GetUsers();
                         this.Close();
                     }
                     else
