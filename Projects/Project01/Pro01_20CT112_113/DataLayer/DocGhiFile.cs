@@ -9,24 +9,36 @@ namespace Pro01_20CT112_113.DataLayer
 {
     public class DocGhiFile
     {
+        //Biến chứa đường dẫn file
         string path;
+        //Hàm tạo của Class dùng để khởi tạo đường dẫn file Users.ini
         public DocGhiFile(string path)
         {
             this.path = path;
         }
-        //Doc file
+       /// <summary>
+       /// Phương thức đọc file Users.ini và trả về danh sách users chứa trong file
+       /// </summary>
+       /// <returns>Danh sách users kiểu List<User></returns>
         public List<User> DocUser()
         {
-            List<User> users = null;//Khai bao danh sach User
+            //Khai báo biến danh sách kiểu User 
+            List<User> users = null;
+            //Cú pháp để khai báo làm việc với file
             using (FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
+                //Cú pháp khai báo để làm việc với Class StreamReader để đọc file text.
                 using (StreamReader streamReader = new StreamReader(fileStream))
                 {
                     string line = string.Empty;
+                   // Khai báo biến kiểu User 
                     User user;
-                    users = new List<User>();//khoi tao danh sach
+                    //Khởi tạo danh sách User 
+                    users = new List<User>();
+                    //Vòng lặp đọc nội dung trong file, vòng lặp dừng khi đọc hết file (null)
                     while ((line = streamReader.ReadLine()) != null)
                     {
+                        //Xử lý từng dòng đọc được trong file text
                         if (!string.IsNullOrEmpty(line))
                         {
                             user = new User();//khoi tao mot user
@@ -37,11 +49,13 @@ namespace Pro01_20CT112_113.DataLayer
                             user.MatKhau = mang[2];
                             user.HoVaTen = mang[3];
                             user.NhoMatKhau = Convert.ToBoolean(mang[4]);
+                            //Thêm User đọc được vào danh sách Users
                             users.Add(user);//Them user vao danh sach
                         }
                     }
                 }
             }
+            //Trả về danh sách đọc được từ file Users.ini
             return users;
         }
         //Ghi file

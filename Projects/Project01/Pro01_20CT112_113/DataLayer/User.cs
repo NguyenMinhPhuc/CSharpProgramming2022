@@ -20,10 +20,10 @@ namespace Pro01_20CT112_113.DataLayer
             get { return iD; } 
             set { iD = value;} 
         }
-        public string TaiKhoan { get; set; }
-        public string MatKhau { get; set; }
-        public string HoVaTen { get; set; }
-        public bool NhoMatKhau { get; set; }
+        public string TaiKhoan { get { return taiKhoan; } set { taiKhoan = value; } }
+        public string MatKhau { get { return matKhau; } set { matKhau = value; } }
+        public string HoVaTen { get { return hoVaTen; } set { hoVaTen = value; } }
+        public bool NhoMatKhau { get { return nhoMatKhau; } set { nhoMatKhau = value; } }
 
         public User DocUser(string line)
         {

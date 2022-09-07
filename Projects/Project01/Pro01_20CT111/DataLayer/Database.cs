@@ -57,6 +57,10 @@ namespace Pro01_20CT111.DataLayer
             bool result = false;
             try
             {
+                if(File.Exists(path))
+                {
+                    File.Delete(path);
+                }
                 using (FileStream fileStream = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write))
                 {
                     using (StreamWriter streamWriter = new StreamWriter(fileStream, Encoding.UTF8))
@@ -65,7 +69,6 @@ namespace Pro01_20CT111.DataLayer
                         {
                             streamWriter.WriteLine(item.ToString());
                         }
-                       
                     }
                 }
                 result = true;
