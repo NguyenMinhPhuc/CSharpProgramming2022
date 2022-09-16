@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pro01_20CT114.BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,8 +18,12 @@ namespace Pro01_20CT114
             InitializeComponent();
         }
        public string ThongTin = string.Empty;
+        BLLUser bd;
         private void FrmLogin_Load(object sender, EventArgs e)
         {
+            bd = new BLLUser(ClsMain.pathUser);
+            txtMatKhau.Text = "admin";
+            txtTaiKhoan.Text = "admin";
            // lblThongTin.Text = ThongTin;
         }
 
@@ -57,12 +62,10 @@ namespace Pro01_20CT114
 
            
         }
-
+     
         private bool KiemTraDangNhap(string taiKhoan, string matKhau)
         {
-            if (taiKhoan.Equals("admin") && matKhau.Equals("admin"))
-                return true;
-            return false;
+            return bd.KiemTraDangNhap(taiKhoan, matKhau);
         }
         bool trangThaiDongForm = false;
         private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)

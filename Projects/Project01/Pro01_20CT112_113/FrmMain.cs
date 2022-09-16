@@ -52,5 +52,11 @@ namespace Pro01_20CT112_113
             FrmQuanLyUser_Main frmQuanLyUser_Main = new FrmQuanLyUser_Main();
             frmQuanLyUser_Main.ShowDialog();
         }
+
+        private void mnuDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            Frm_DoiMatKhau frm_DoiMatKhau = new Frm_DoiMatKhau();
+            frm_DoiMatKhau.ShowDialog();
+        }
     }
 }

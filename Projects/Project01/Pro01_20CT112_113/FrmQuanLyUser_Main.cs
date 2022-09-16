@@ -35,6 +35,7 @@ namespace Pro01_20CT112_113
             //dua du lieu vao luoi (datagridview)
             var bindingList = new BindingList<User>(ClsMain.users);
             var source = new BindingSource(bindingList, null);
+
             dgvTaiKhoan.DataSource = source;
         }
 
