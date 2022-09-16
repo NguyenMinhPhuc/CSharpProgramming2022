@@ -46,7 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\BLLUser.cs" />
     <Compile Include="ClsMain.cs" />
+    <Compile Include="DataLayer\Database.cs" />
+    <Compile Include="DataLayer\User.cs" />
+    <Compile Include="DataLayer\UserDao.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +63,18 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmQuanLyNguoiDung_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyNguoiDung_Main.Designer.cs">
+      <DependentUpon>FrmQuanLyNguoiDung_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_QuanLyNguoiDung_Modified.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_QuanLyNguoiDung_Modified.Designer.cs">
+      <DependentUpon>Frm_QuanLyNguoiDung_Modified.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
@@ -66,6 +82,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyNguoiDung_Main.resx">
+      <DependentUpon>FrmQuanLyNguoiDung_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_QuanLyNguoiDung_Modified.resx">
+      <DependentUpon>Frm_QuanLyNguoiDung_Modified.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +97,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -88,6 +111,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\add_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\close_window_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\delete_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\refresh_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\update_16px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -47,5 +47,11 @@ namespace Pro01_20CT114
         {
             lblThoiGian.Text = DateTime.Now.ToString();
         }
+
+        private void mnuQuanLyNguoiDung_Click(object sender, EventArgs e)
+        {
+            FrmQuanLyNguoiDung_Main frmQuanLyNguoiDung_Main = new FrmQuanLyNguoiDung_Main();
+            frmQuanLyNguoiDung_Main.ShowDialog();
+        }
     }
 }
