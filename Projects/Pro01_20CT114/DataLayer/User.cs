@@ -31,7 +31,7 @@ namespace Pro01_20CT114.DataLayer
 
         public override bool Equals(object obj)
         {
-            if(obj is User)
+            if (obj is User)
             {
                 return ((User)obj).ID.ToString().Equals(this.ID.ToString());
             }

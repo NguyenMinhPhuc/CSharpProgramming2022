@@ -41,5 +41,11 @@ namespace Pro01_20CT111
             FrmQuanLyTaiKhoan_Main frmQuanLyTaiKhoan_Main = new FrmQuanLyTaiKhoan_Main();
             frmQuanLyTaiKhoan_Main.ShowDialog();
         }
+
+        private void mnuDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            Frm_DoiMatKhau frm_DoiMatKhau = new Frm_DoiMatKhau();
+            frm_DoiMatKhau.ShowDialog();
+        }
     }
 }

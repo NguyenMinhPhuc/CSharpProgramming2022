@@ -1,7 +1,7 @@
 ﻿
 namespace Pro01_20CT114
 {
-    partial class Frm_QuanLyNguoiDung_Modified
+    partial class FrmQuanLyNguoiDung_Modified
     {
         /// <summary>
         /// Required designer variable.

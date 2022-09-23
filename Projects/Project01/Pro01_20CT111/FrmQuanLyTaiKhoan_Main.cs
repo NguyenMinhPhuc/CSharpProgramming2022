@@ -74,6 +74,7 @@ namespace Pro01_20CT111
                 frmQuanLyTaiKhoan_Modified.ShowDialog();
                 //Goi lai ds load user 
                 LoadUsers();
+                user = null;
 
             }
 
@@ -100,11 +101,35 @@ namespace Pro01_20CT111
                     MessageBox.Show("Thanh cong");
                    
                 }
+                user = null;
             }
             else
             {
                 MessageBox.Show("Chưa chọn tài khoản cần xóa!\nXin vui lòng chọn lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnChangedPassword_Click(object sender, EventArgs e)
+        {
+            if (user != null)
+            {
+                if(ClsMain.taiKhoan.Equals("admin"))
+                { Frm_DoiMatKhau frm_DoiMatKhau = new Frm_DoiMatKhau();
+                frm_DoiMatKhau.id = user.ID;
+                frm_DoiMatKhau.ShowDialog();
+                user = null;
+                }
+                else
+                {
+                    MessageBox.Show("User khong co quyen nay");
+                }
+               
+            }
+            else
+            {
+                MessageBox.Show("Chua chon User");
+            }
+            
         }
     }
 }

@@ -33,10 +33,11 @@ namespace Pro01_20CT111
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuThoat = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuQuanLyTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblThongTinDangNhap = new System.Windows.Forms.ToolStripStatusLabel();
-            this.mnuQuanLyTaiKhoan = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,19 +66,28 @@ namespace Pro01_20CT111
             // mnuDangXuat
             // 
             this.mnuDangXuat.Name = "mnuDangXuat";
-            this.mnuDangXuat.Size = new System.Drawing.Size(180, 22);
+            this.mnuDangXuat.Size = new System.Drawing.Size(167, 22);
             this.mnuDangXuat.Text = "Đăng xuất";
             this.mnuDangXuat.Click += new System.EventHandler(this.mnuDangXuat_Click);
             // 
             // mnuThoat
             // 
             this.mnuThoat.Name = "mnuThoat";
-            this.mnuThoat.Size = new System.Drawing.Size(180, 22);
+            this.mnuThoat.Size = new System.Drawing.Size(167, 22);
             this.mnuThoat.Text = "Thoát";
             this.mnuThoat.Click += new System.EventHandler(this.mnuThoat_Click);
             // 
+            // mnuQuanLyTaiKhoan
+            // 
+            this.mnuQuanLyTaiKhoan.Name = "mnuQuanLyTaiKhoan";
+            this.mnuQuanLyTaiKhoan.Size = new System.Drawing.Size(167, 22);
+            this.mnuQuanLyTaiKhoan.Text = "Quản lý tài khoản";
+            this.mnuQuanLyTaiKhoan.Click += new System.EventHandler(this.mnuQuanLyTaiKhoan_Click);
+            // 
             // editToolStripMenuItem
             // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuDoiMatKhau});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
@@ -98,12 +108,12 @@ namespace Pro01_20CT111
             this.lblThongTinDangNhap.Size = new System.Drawing.Size(16, 17);
             this.lblThongTinDangNhap.Text = "...";
             // 
-            // mnuQuanLyTaiKhoan
+            // mnuDoiMatKhau
             // 
-            this.mnuQuanLyTaiKhoan.Name = "mnuQuanLyTaiKhoan";
-            this.mnuQuanLyTaiKhoan.Size = new System.Drawing.Size(180, 22);
-            this.mnuQuanLyTaiKhoan.Text = "Quản lý tài khoản";
-            this.mnuQuanLyTaiKhoan.Click += new System.EventHandler(this.mnuQuanLyTaiKhoan_Click);
+            this.mnuDoiMatKhau.Name = "mnuDoiMatKhau";
+            this.mnuDoiMatKhau.Size = new System.Drawing.Size(180, 22);
+            this.mnuDoiMatKhau.Text = "Doi mat khau";
+            this.mnuDoiMatKhau.Click += new System.EventHandler(this.mnuDoiMatKhau_Click);
             // 
             // FrmMain
             // 
@@ -138,6 +148,7 @@ namespace Pro01_20CT111
         private System.Windows.Forms.ToolStripStatusLabel lblThongTinDangNhap;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mnuQuanLyTaiKhoan;
+        private System.Windows.Forms.ToolStripMenuItem mnuDoiMatKhau;
     }
 }
 
