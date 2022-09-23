@@ -167,8 +167,9 @@ namespace Pro01_20CT111
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "FrmQuanLyTaiKhoan_Modified";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmQuanLyTaiKhoan_Modified";
             this.Load += new System.EventHandler(this.FrmQuanLyTaiKhoan_Modified_Load);
             this.ResumeLayout(false);

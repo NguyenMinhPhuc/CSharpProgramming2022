@@ -22,13 +22,12 @@ namespace Pro01_20CT114
         private void FrmQuanLyNguoiDung_Main_Load(object sender, EventArgs e)
         {
             bd = new BLLUser(ClsMain.pathUser);
+            ClsMain.users=bd.GetUsers();
             HienThiDanhSachUsers();
         }
 
         private void HienThiDanhSachUsers()
         {
-            ClsMain.users=bd.GetUsers();
-
             var bindingList = new BindingList<User>(ClsMain.users);
             var source = new BindingSource(bindingList, null);
 
@@ -37,7 +36,7 @@ namespace Pro01_20CT114
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            Frm_QuanLyNguoiDung_Modified frm_QuanLyNguoiDung_Modified = new Frm_QuanLyNguoiDung_Modified();
+            FrmQuanLyNguoiDung_Modified frm_QuanLyNguoiDung_Modified = new FrmQuanLyNguoiDung_Modified();
             frm_QuanLyNguoiDung_Modified.isAdd = true;
             frm_QuanLyNguoiDung_Modified.ShowDialog();
             HienThiDanhSachUsers();
@@ -49,7 +48,7 @@ namespace Pro01_20CT114
             {
 
 
-                Frm_QuanLyNguoiDung_Modified frm_QuanLyNguoiDung_Modified = new Frm_QuanLyNguoiDung_Modified();
+                FrmQuanLyNguoiDung_Modified frm_QuanLyNguoiDung_Modified = new FrmQuanLyNguoiDung_Modified();
                 frm_QuanLyNguoiDung_Modified.isAdd = false;
                 frm_QuanLyNguoiDung_Modified.user = user;
                 frm_QuanLyNguoiDung_Modified.ShowDialog();
@@ -72,6 +71,70 @@ namespace Pro01_20CT114
 
                 };
             }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (user != null)
+            {
+                XoaUser(user.ID);
+            }
+            else
+            {
+                MessageBox.Show("chua chon use");
+            }
+        }
+
+        private void XoaUser(int iD)
+        {
+            foreach (User item in ClsMain.users.ToList())
+            {
+                if (item.ID == iD)
+                {
+                    ClsMain.users.Remove(user);
+                    HienThiDanhSachUsers();
+                    user = null;
+                    break;
+                }
+            }
+
+            ClsMain.CapNhatData(ClsMain.pathUser,ClsMain.users);
+        }
+        private void XoaUser(string iD)
+        {
+            User user = TimKiem(Convert.ToInt32(iD))[0];
+
+            ClsMain.users.Remove(user);
+            HienThiDanhSachUsers();
+
+            ClsMain.CapNhatData(ClsMain.pathUser, ClsMain.users);
+        }
+        public List<User> TimKiem(int iD)
+        {
+            List<User>  results = ClsMain.users.FindAll(
+            delegate (User user)
+            {
+                return user.ID ==iD;
+            }
+            );
+            if (results.Count != 0)
+            {
+                return results;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        private void btnNapLai_Click(object sender, EventArgs e)
+        {
+            HienThiDanhSachUsers();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Pro01_20CT114
 {
-    public partial class Frm_QuanLyNguoiDung_Modified : Form
+    public partial class FrmQuanLyNguoiDung_Modified : Form
     {
-        public Frm_QuanLyNguoiDung_Modified()
+        public FrmQuanLyNguoiDung_Modified()
         {
             InitializeComponent();
         }
@@ -26,17 +26,35 @@ namespace Pro01_20CT114
             bd = new BLLUser(ClsMain.pathUser);
             if (isAdd)
             {
-                //ham tang tu doong
+                txtID.Text = HamTangID().ToString();
+                txtID.Enabled = false;
             }
             else
             {
+                txtID.Enabled = false;
                 txtID.Text = user.ID.ToString(); txtID.Enabled = false;
                 txtHoVaTen.Text = user.HoVaTen;
                 txtTaiKhoan.Text = user.TaiKhoan;
                 txtMatKhau.Text = user.MatKhau;
+                txtMatKhau.Enabled = false;
                 ckbNhoMatKhau.Checked = user.NhoMatKhau;
             }
         }
+        //120000123
+        //20220923000001-SubString(start,number)
+        private int HamTangID()
+        {
+            //lấy được id lớn nhất
+            int max = 0;
+            foreach (User item in ClsMain.users)
+            {
+                if (item.ID >= max)
+                    max = item.ID;
+            }
+            //cộng max +1;
+            return max + 1;
+        }
+
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
             //kiểm tra ràng buộc
@@ -73,14 +91,7 @@ ClsMain.users.Add(user);
                             }
                         }
                         //ghi file
-                        if (bd.CapNhatDuLieu(ClsMain.users))
-                        {
-                            MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("cập nhật không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        ClsMain.CapNhatData(ClsMain.pathUser, ClsMain.users);
                     }
                     else
                     {

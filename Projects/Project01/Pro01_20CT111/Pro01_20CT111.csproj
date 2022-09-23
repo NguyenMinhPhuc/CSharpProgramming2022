@@ -75,6 +75,12 @@
     <Compile Include="FrmQuanLyTaiKhoan_Modified.Designer.cs">
       <DependentUpon>FrmQuanLyTaiKhoan_Modified.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_DoiMatKhau.Designer.cs">
+      <DependentUpon>Frm_DoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQuanLyTaiKhoan_Modified.resx">
       <DependentUpon>FrmQuanLyTaiKhoan_Modified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_DoiMatKhau.resx">
+      <DependentUpon>Frm_DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

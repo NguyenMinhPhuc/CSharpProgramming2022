@@ -53,5 +53,11 @@ namespace Pro01_20CT114
             FrmQuanLyNguoiDung_Main frmQuanLyNguoiDung_Main = new FrmQuanLyNguoiDung_Main();
             frmQuanLyNguoiDung_Main.ShowDialog();
         }
+
+        private void mnuDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            Frm_DoiMatKhau frm_DoiMatKhau = new Frm_DoiMatKhau();
+            frm_DoiMatKhau.ShowDialog();
+        }
     }
 }
