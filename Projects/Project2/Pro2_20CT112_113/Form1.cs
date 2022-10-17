@@ -73,5 +73,10 @@ namespace Pro2_20CT112_113
                 pnlDanhMuc.Height = 43;
             }
         }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
