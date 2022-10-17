@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MyLibrarySoft, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MyLibrarySoft.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,11 +50,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaiTap2\CauHoi.cs" />
+    <Compile Include="BaiTap2\CauTraLoi.cs" />
+    <Compile Include="BaiTap2\FrmCauTracNghiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaiTap2\FrmCauTracNghiem.Designer.cs">
+      <DependentUpon>FrmCauTracNghiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTest.Designer.cs">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Chuong06_BaiTap01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Chuong06_BaiTap01.Designer.cs">
+      <DependentUpon>Frm_Chuong06_BaiTap01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_GameTrucXanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_GameTrucXanh.Designer.cs">
+      <DependentUpon>Frm_GameTrucXanh.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,8 +96,20 @@
     <Compile Include="uc_ThongTin.Designer.cs">
       <DependentUpon>uc_ThongTin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaiTap2\FrmCauTracNghiem.resx">
+      <DependentUpon>FrmCauTracNghiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTest.resx">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Chuong06_BaiTap01.resx">
+      <DependentUpon>Frm_Chuong06_BaiTap01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_GameTrucXanh.resx">
+      <DependentUpon>Frm_GameTrucXanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -184,6 +226,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\update_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyLibraryUI\MyLibraryUI.csproj">
+      <Project>{dda016b4-f85d-46f9-8361-f0651b68eac8}</Project>
+      <Name>MyLibraryUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -58,6 +58,7 @@ namespace Pro2_20CT112_113
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pnlMenuLeft.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.pnlDanhMuc.SuspendLayout();
@@ -65,6 +66,7 @@ namespace Pro2_20CT112_113
             this.statusStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tp01.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -355,6 +357,7 @@ namespace Pro2_20CT112_113
             // 
             // tp01
             // 
+            this.tp01.Controls.Add(this.checkBox1);
             this.tp01.Location = new System.Drawing.Point(4, 22);
             this.tp01.Name = "tp01";
             this.tp01.Padding = new System.Windows.Forms.Padding(3);
@@ -452,6 +455,17 @@ namespace Pro2_20CT112_113
             this.textBox1.Size = new System.Drawing.Size(257, 35);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(290, 186);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -472,6 +486,8 @@ namespace Pro2_20CT112_113
             this.statusStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.tp01.ResumeLayout(false);
+            this.tp01.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -511,6 +527,7 @@ namespace Pro2_20CT112_113
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private uc_Test uc_Test1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

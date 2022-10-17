@@ -16,7 +16,7 @@ namespace Pro2_20CT112_113
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Frm_GameTrucXanh());
         }
     }
 }
