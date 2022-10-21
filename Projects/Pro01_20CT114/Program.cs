@@ -16,7 +16,7 @@ namespace Pro01_20CT114
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain());
+            Application.Run(new Frm_Chuong03_Bai06());
         }
     }
 }

@@ -75,12 +75,19 @@
     <Compile Include="FrmQuanLyNguoiDung_Modified.Designer.cs">
       <DependentUpon>FrmQuanLyNguoiDung_Modified.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Chuong03_Bai06.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Chuong03_Bai06.Designer.cs">
+      <DependentUpon>Frm_Chuong03_Bai06.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_DoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_DoiMatKhau.Designer.cs">
       <DependentUpon>Frm_DoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
@@ -94,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmQuanLyNguoiDung_Modified.resx">
       <DependentUpon>FrmQuanLyNguoiDung_Modified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Chuong03_Bai06.resx">
+      <DependentUpon>Frm_Chuong03_Bai06.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_DoiMatKhau.resx">
       <DependentUpon>Frm_DoiMatKhau.cs</DependentUpon>
