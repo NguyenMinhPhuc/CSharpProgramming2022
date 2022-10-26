@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MyLibraryUI">
+      <HintPath>..\MyLibraryUI\obj\Debug\MyLibraryUI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,16 +55,49 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="uc_Picture.cs">
+    <Compile Include="Frm_TestComponents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TestComponents.Designer.cs">
+      <DependentUpon>Frm_TestComponents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyComponents\MyColorTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponents\MyNumberTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponents\MyNumberTextBox.Designer.cs">
+      <DependentUpon>MyNumberTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\UC_Input.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uc_Picture.Designer.cs">
-      <DependentUpon>uc_Picture.cs</DependentUpon>
+    <Compile Include="MyUserControl\UC_Input.Designer.cs">
+      <DependentUpon>UC_Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MyUserControl\UC_QuanLyNguoiDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyUserControl\UC_QuanLyNguoiDung.Designer.cs">
+      <DependentUpon>UC_QuanLyNguoiDung.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TestComponents.resx">
+      <DependentUpon>Frm_TestComponents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyComponents\MyNumberTextBox.resx">
+      <DependentUpon>MyNumberTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\UC_Input.resx">
+      <DependentUpon>UC_Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyUserControl\UC_QuanLyNguoiDung.resx">
+      <DependentUpon>UC_QuanLyNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,9 +109,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="uc_Picture.resx">
-      <DependentUpon>uc_Picture.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -179,5 +212,6 @@
   <ItemGroup>
     <None Include="Resources\update_32px.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

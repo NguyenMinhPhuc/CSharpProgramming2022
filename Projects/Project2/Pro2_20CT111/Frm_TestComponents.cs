@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Pro2_20CT111
 {
-    public partial class uc_Picture : UserControl
+    public partial class Frm_TestComponents : Form
     {
-        public uc_Picture()
+        public Frm_TestComponents()
         {
             InitializeComponent();
+        }
+
+        private void btnInt_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(myNumberTextBox1.IntValue.ToString());
         }
     }
 }
