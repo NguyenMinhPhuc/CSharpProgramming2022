@@ -65,6 +65,8 @@ namespace Pro2_20CT111
             this.myNumberTextBox1.Name = "myNumberTextBox1";
             this.myNumberTextBox1.Size = new System.Drawing.Size(521, 35);
             this.myNumberTextBox1.TabIndex = 2;
+            this.myNumberTextBox1.Text = "0";
+            this.myNumberTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnInt
             // 
@@ -86,7 +88,7 @@ namespace Pro2_20CT111
             this.cricleButton1.FlatAppearance.BorderSize = 0;
             this.cricleButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cricleButton1.ForeColor = System.Drawing.Color.White;
-            this.cricleButton1.Location = new System.Drawing.Point(89, 271);
+            this.cricleButton1.Location = new System.Drawing.Point(606, 255);
             this.cricleButton1.Name = "cricleButton1";
             this.cricleButton1.Size = new System.Drawing.Size(130, 130);
             this.cricleButton1.TabIndex = 4;
