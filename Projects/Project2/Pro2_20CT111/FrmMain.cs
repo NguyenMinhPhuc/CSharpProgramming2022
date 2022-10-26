@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pro2_20CT111.MyUserControl;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -118,6 +119,14 @@ namespace Pro2_20CT111
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            UC_QuanLyNguoiDung uC_QuanLyNguoiDung = new UC_QuanLyNguoiDung();
+            uC_QuanLyNguoiDung.Dock = DockStyle.Fill;
+            tpUserControl.Controls.Add(uC_QuanLyNguoiDung);
+            
         }
     }
 }
