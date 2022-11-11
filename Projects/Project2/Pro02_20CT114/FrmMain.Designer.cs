@@ -1,7 +1,7 @@
 ﻿
 namespace Pro02_20CT114
 {
-    partial class Form1
+    partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -31,8 +31,6 @@ namespace Pro02_20CT114
         {
             this.components = new System.ComponentModel.Container();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlLeft = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pnlHeThong = new System.Windows.Forms.FlowLayoutPanel();
             this.btnHeThong = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -42,7 +40,7 @@ namespace Pro02_20CT114
             this.button6 = new System.Windows.Forms.Button();
             this.pnlDanhMuc = new System.Windows.Forms.FlowLayoutPanel();
             this.btnDanhMuc = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnQuanLyNguoiDung = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -54,23 +52,25 @@ namespace Pro02_20CT114
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
+            this.pnlLeft = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblGioHeThong = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button18 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button17 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button17 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button18 = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblGioHeThong = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.tpUserControl = new System.Windows.Forms.TabPage();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1.SuspendLayout();
-            this.pnlLeft.SuspendLayout();
             this.pnlHeThong.SuspendLayout();
             this.pnlDanhMuc.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.pnlLeft.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -86,25 +86,6 @@ namespace Pro02_20CT114
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(259, 593);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // pnlLeft
-            // 
-            this.pnlLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
-            this.pnlLeft.Controls.Add(this.flowLayoutPanel1);
-            this.pnlLeft.Controls.Add(this.panel2);
-            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLeft.Location = new System.Drawing.Point(0, 0);
-            this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(259, 646);
-            this.pnlLeft.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(259, 53);
-            this.panel2.TabIndex = 0;
             // 
             // pnlHeThong
             // 
@@ -216,7 +197,7 @@ namespace Pro02_20CT114
             // 
             this.pnlDanhMuc.BackColor = System.Drawing.Color.White;
             this.pnlDanhMuc.Controls.Add(this.btnDanhMuc);
-            this.pnlDanhMuc.Controls.Add(this.button8);
+            this.pnlDanhMuc.Controls.Add(this.btnQuanLyNguoiDung);
             this.pnlDanhMuc.Controls.Add(this.button9);
             this.pnlDanhMuc.Controls.Add(this.button10);
             this.pnlDanhMuc.Controls.Add(this.button11);
@@ -243,20 +224,21 @@ namespace Pro02_20CT114
             this.btnDanhMuc.UseVisualStyleBackColor = false;
             this.btnDanhMuc.Click += new System.EventHandler(this.btnDanhMuc_Click);
             // 
-            // button8
+            // btnQuanLyNguoiDung
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(3, 44);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 1, 3, 0);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(253, 40);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Đăng xuất";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnQuanLyNguoiDung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.btnQuanLyNguoiDung.FlatAppearance.BorderSize = 0;
+            this.btnQuanLyNguoiDung.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnQuanLyNguoiDung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuanLyNguoiDung.ForeColor = System.Drawing.Color.White;
+            this.btnQuanLyNguoiDung.Location = new System.Drawing.Point(3, 44);
+            this.btnQuanLyNguoiDung.Margin = new System.Windows.Forms.Padding(3, 1, 3, 0);
+            this.btnQuanLyNguoiDung.Name = "btnQuanLyNguoiDung";
+            this.btnQuanLyNguoiDung.Size = new System.Drawing.Size(253, 40);
+            this.btnQuanLyNguoiDung.TabIndex = 1;
+            this.btnQuanLyNguoiDung.Text = "Quản lý người dùng";
+            this.btnQuanLyNguoiDung.UseVisualStyleBackColor = false;
+            this.btnQuanLyNguoiDung.Click += new System.EventHandler(this.btnQuanLyNguoiDung_Click);
             // 
             // button9
             // 
@@ -423,6 +405,25 @@ namespace Pro02_20CT114
             this.button16.Text = "Đăng xuất";
             this.button16.UseVisualStyleBackColor = false;
             // 
+            // pnlLeft
+            // 
+            this.pnlLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
+            this.pnlLeft.Controls.Add(this.flowLayoutPanel1);
+            this.pnlLeft.Controls.Add(this.panel2);
+            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnlLeft.Name = "pnlLeft";
+            this.pnlLeft.Size = new System.Drawing.Size(259, 646);
+            this.pnlLeft.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(259, 53);
+            this.panel2.TabIndex = 0;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(101)))), ((int)(((byte)(192)))));
@@ -438,10 +439,72 @@ namespace Pro02_20CT114
             this.panel1.Size = new System.Drawing.Size(1036, 53);
             this.panel1.TabIndex = 2;
             // 
+            // lblGioHeThong
+            // 
+            this.lblGioHeThong.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblGioHeThong.ForeColor = System.Drawing.Color.White;
+            this.lblGioHeThong.Location = new System.Drawing.Point(733, 0);
+            this.lblGioHeThong.Name = "lblGioHeThong";
+            this.lblGioHeThong.Size = new System.Drawing.Size(250, 49);
+            this.lblGioHeThong.TabIndex = 5;
+            this.lblGioHeThong.Text = "21-09-2022 11:00:00";
+            this.lblGioHeThong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(983, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(4, 49);
+            this.panel4.TabIndex = 4;
+            // 
+            // button18
+            // 
+            this.button18.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button18.FlatAppearance.BorderSize = 0;
+            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Location = new System.Drawing.Point(987, 0);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(49, 49);
+            this.button18.TabIndex = 3;
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 49);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1036, 4);
+            this.panel3.TabIndex = 2;
+            // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(182)))), ((int)(((byte)(68)))));
+            this.button17.FlatAppearance.BorderSize = 0;
+            this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.ForeColor = System.Drawing.Color.White;
+            this.button17.Location = new System.Drawing.Point(387, 9);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(173, 37);
+            this.button17.TabIndex = 1;
+            this.button17.Text = "button17";
+            this.button17.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(375, 35);
+            this.textBox1.TabIndex = 0;
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tpUserControl);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(259, 53);
             this.tabControl1.Name = "tabControl1";
@@ -460,83 +523,6 @@ namespace Pro02_20CT114
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 38);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 58);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(375, 35);
-            this.textBox1.TabIndex = 0;
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(182)))), ((int)(((byte)(68)))));
-            this.button17.FlatAppearance.BorderSize = 0;
-            this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(387, 9);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(173, 37);
-            this.button17.TabIndex = 1;
-            this.button17.Text = "button17";
-            this.button17.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 49);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1036, 4);
-            this.panel3.TabIndex = 2;
-            // 
-            // button18
-            // 
-            this.button18.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Location = new System.Drawing.Point(987, 0);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(49, 49);
-            this.button18.TabIndex = 3;
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(983, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(4, 49);
-            this.panel4.TabIndex = 4;
-            // 
-            // lblGioHeThong
-            // 
-            this.lblGioHeThong.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblGioHeThong.ForeColor = System.Drawing.Color.White;
-            this.lblGioHeThong.Location = new System.Drawing.Point(733, 0);
-            this.lblGioHeThong.Name = "lblGioHeThong";
-            this.lblGioHeThong.Size = new System.Drawing.Size(250, 49);
-            this.lblGioHeThong.TabIndex = 5;
-            this.lblGioHeThong.Text = "21-09-2022 11:00:00";
-            this.lblGioHeThong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // pnlContainer
             // 
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -545,7 +531,22 @@ namespace Pro02_20CT114
             this.pnlContainer.Size = new System.Drawing.Size(1022, 545);
             this.pnlContainer.TabIndex = 0;
             // 
-            // Form1
+            // tpUserControl
+            // 
+            this.tpUserControl.Location = new System.Drawing.Point(4, 38);
+            this.tpUserControl.Name = "tpUserControl";
+            this.tpUserControl.Padding = new System.Windows.Forms.Padding(3);
+            this.tpUserControl.Size = new System.Drawing.Size(1028, 551);
+            this.tpUserControl.TabIndex = 1;
+            this.tpUserControl.Text = "tabPage2";
+            this.tpUserControl.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -556,18 +557,18 @@ namespace Pro02_20CT114
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "FrmMain";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.pnlLeft.ResumeLayout(false);
             this.pnlHeThong.ResumeLayout(false);
             this.pnlDanhMuc.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
+            this.pnlLeft.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -588,7 +589,7 @@ namespace Pro02_20CT114
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.FlowLayoutPanel pnlDanhMuc;
         private System.Windows.Forms.Button btnDanhMuc;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnQuanLyNguoiDung;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
@@ -611,7 +612,7 @@ namespace Pro02_20CT114
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tpUserControl;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.FlowLayoutPanel pnlContainer;
     }

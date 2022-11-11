@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Pro02_20CT114
+namespace Pro03_20CT114
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Pro02_20CT114
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain());
+            Application.Run(new Frm_Main());
         }
     }
 }
