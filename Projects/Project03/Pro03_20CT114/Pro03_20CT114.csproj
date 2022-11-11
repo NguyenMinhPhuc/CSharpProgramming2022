@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0A59F9DF-6F50-4327-B9B3-02228106D483}</ProjectGuid>
+    <ProjectGuid>{F46073B9-A8FB-4664-8BF4-5900CDF2574A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Pro02_20CT114</RootNamespace>
-    <AssemblyName>Pro02_20CT114</AssemblyName>
+    <RootNamespace>Pro03_20CT114</RootNamespace>
+    <AssemblyName>Pro03_20CT114</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,43 +46,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmMain.cs">
+    <Compile Include="BussinessLayer\BLL_NhanVien.cs" />
+    <Compile Include="DataLayer\Dao\NhanVienDao.cs" />
+    <Compile Include="DataLayer\Entity\GiaiThuong.cs" />
+    <Compile Include="DataLayer\Entity\NhanVien.cs" />
+    <Compile Include="DataLayer\Entity\NhanVienNhanGiai.cs" />
+    <Compile Include="Frm_DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <Compile Include="Frm_DangNhap.Designer.cs">
+      <DependentUpon>Frm_DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_TestUserControl.cs">
+    <Compile Include="Frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_TestUserControl.Designer.cs">
-      <DependentUpon>Frm_TestUserControl.cs</DependentUpon>
+    <Compile Include="Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\UC_NhapLieu.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Frm_QuanLyGiaiThuong.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyUserControl\UC_NhapLieu.Designer.cs">
-      <DependentUpon>UC_NhapLieu.cs</DependentUpon>
+    <Compile Include="Frm_QuanLyGiaiThuong.Designer.cs">
+      <DependentUpon>Frm_QuanLyGiaiThuong.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\UC_QuanLyNguoiDung.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Frm_QuanLyNhanVien.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyUserControl\UC_QuanLyNguoiDung.Designer.cs">
-      <DependentUpon>UC_QuanLyNguoiDung.cs</DependentUpon>
+    <Compile Include="Frm_QuanLyNhanVien.Designer.cs">
+      <DependentUpon>Frm_QuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_QuanLyNhanVien_NhanGiai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_QuanLyNhanVien_NhanGiai.Designer.cs">
+      <DependentUpon>Frm_QuanLyNhanVien_NhanGiai.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_TestUserControl.resx">
-      <DependentUpon>Frm_TestUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyUserControl\UC_NhapLieu.resx">
-      <DependentUpon>UC_NhapLieu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyUserControl\UC_QuanLyNguoiDung.resx">
-      <DependentUpon>UC_QuanLyNguoiDung.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,11 +108,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\MyUI_CT114\MyUI_CT114.csproj">
-      <Project>{b058b8b3-820b-4fbc-bed8-7405e3495f43}</Project>
-      <Name>MyUI_CT114</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

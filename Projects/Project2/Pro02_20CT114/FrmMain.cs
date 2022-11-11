@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pro02_20CT114.MyUserControl;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Pro02_20CT114
 {
-    public partial class Form1 : Form
+    public partial class FrmMain : Form
     {
-        public Form1()
+        public FrmMain()
         {
             InitializeComponent();
         }
@@ -88,6 +89,14 @@ namespace Pro02_20CT114
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblGioHeThong.Text = string.Format("{0}", DateTime.Now.ToString());
+        }
+
+        private void btnQuanLyNguoiDung_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+            UC_QuanLyNguoiDung uC_QuanLyNguoiDung = new UC_QuanLyNguoiDung();
+            uC_QuanLyNguoiDung.Dock = DockStyle.Fill;
+            tpUserControl.Controls.Add(uC_QuanLyNguoiDung);
         }
     }
 }
