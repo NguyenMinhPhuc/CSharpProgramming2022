@@ -33,7 +33,7 @@ namespace Pro03_20CT114
         private void btnLayDanhSach_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Text files (*.ini)|*.int|All files (*.*)|*.*";
+            openFileDialog.Filter = "Text files (*.ini)|*.ini|All files (*.*)|*.*";
             openFileDialog.InitialDirectory=@"D:\";
             openFileDialog.RestoreDirectory = true;
 
@@ -148,6 +148,30 @@ namespace Pro03_20CT114
             lblN4.ForeColor = colors[indexColor];
             lblN5.ForeColor = colors[indexColor];
 
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "";
+            saveFileDialog.DefaultExt = "ini";
+            saveFileDialog.Title = "Lưu danh sách trúng thường";
+            saveFileDialog.InitialDirectory=@"D:\";
+            saveFileDialog.AddExtension = true;
+            saveFileDialog.FileName = string.Format("{0:0000}{1:00}{2:00}_{3}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, "GiaiThuong");
+            if(saveFileDialog.ShowDialog()==DialogResult.OK)
+            {
+                //Lưu file
+                MessageBox.Show(saveFileDialog.FileName);
+
+            }    
+        }
+
+        private void dgvDanhSachNhanVien_DoubleClick(object sender, EventArgs e)
+        {
+            NhanVien nhanVien = LayNhanVienTheoMaNhanVien(dgvDanhSachNhanVien.CurrentRow.Cells["colMaNhanVien"].Value.ToString());
+            nhanViens.Remove(nhanVien);
+            LoadNhanVien();
         }
     }
 }
