@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A5B470E7-47D7-434A-96AF-E3009536EEA0}</ProjectGuid>
+    <ProjectGuid>{45893DE3-3565-45F8-AD5F-AF4CA8B40BB0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Pro03_20CT112_113</RootNamespace>
-    <AssemblyName>Pro03_20CT112_113</AssemblyName>
+    <RootNamespace>Pro03_20CT111_QuaySo</RootNamespace>
+    <AssemblyName>Pro03_20CT111_QuaySo</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,54 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLayer\BLLEmployee.cs" />
-    <Compile Include="ClsMain.cs" />
-    <Compile Include="DataLayer\Dao\EmployeeDao.cs" />
-    <Compile Include="DataLayer\Database.cs" />
-    <Compile Include="DataLayer\DatabaseType\DatabaseConnectBinary.cs" />
-    <Compile Include="DataLayer\DatabaseType\DatabaseConnectExcel.cs" />
-    <Compile Include="DataLayer\DatabaseType\DatabaseConnectINI.cs" />
-    <Compile Include="DataLayer\DatabaseType\DatabaseConnectText.cs" />
-    <Compile Include="DataLayer\DatabaseType\DatabaseFactory.cs" />
-    <Compile Include="DataLayer\DatabaseType\IDatabaseConnect.cs" />
-    <Compile Include="DataLayer\DatabaseType\IDatabaseFactory.cs" />
-    <Compile Include="DataLayer\DatabaseType\TypeDatabase.cs" />
-    <Compile Include="DataLayer\Entity\Employee.cs" />
-    <Compile Include="DataLayer\Entity\NhanVienTrungThuong.cs" />
-    <Compile Include="FrmDangNhap.cs">
+    <Compile Include="BusinessLayer\BLL_NhanVien.cs" />
+    <Compile Include="DataLayer\Dao\NhanVienDao.cs" />
+    <Compile Include="DataLayer\Entity\GiaiThuong.cs" />
+    <Compile Include="DataLayer\Entity\NhanVien.cs" />
+    <Compile Include="DataLayer\Entity\NhanVienNhanGiai.cs" />
+    <Compile Include="Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDangNhap.Designer.cs">
-      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    <Compile Include="Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMain.cs">
+    <Compile Include="Frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <Compile Include="Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmQuanLyGiaiThuong.cs">
+    <Compile Include="Frm_QuanLyDanhSach_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmQuanLyGiaiThuong.Designer.cs">
-      <DependentUpon>FrmQuanLyGiaiThuong.cs</DependentUpon>
+    <Compile Include="Frm_QuanLyDanhSach_Main.Designer.cs">
+      <DependentUpon>Frm_QuanLyDanhSach_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmQuanLyNhanVien.cs">
+    <Compile Include="Frm_QuanLyDanhSach_Modifies.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmQuanLyNhanVien.Designer.cs">
-      <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmQuanLyNhanVienTrungGiai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmQuanLyNhanVienTrungGiai.Designer.cs">
-      <DependentUpon>FrmQuanLyNhanVienTrungGiai.cs</DependentUpon>
+    <Compile Include="Frm_QuanLyDanhSach_Modifies.Designer.cs">
+      <DependentUpon>Frm_QuanLyDanhSach_Modifies.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_QuanLyDanhSach_Modifies.resx">
+      <DependentUpon>Frm_QuanLyDanhSach_Modifies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
