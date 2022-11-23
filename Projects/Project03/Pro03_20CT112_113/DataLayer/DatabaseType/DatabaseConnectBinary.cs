@@ -7,22 +7,19 @@ using System.Threading.Tasks;
 
 namespace Pro03_20CT112_113.DataLayer.DatabaseType
 {
-    public class DatabaseConnectINI : IDatabaseConnect
+    public class DatabaseConnectBinary : IDatabaseConnect
     {
         public List<string> ReadFile(string path)
         {
-            List<string> result =new List<string>();
+            List<string> result = null;
             using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
-                using (StreamReader sr = new StreamReader(fs))
+                using (BinaryReader sr = new BinaryReader(fs))
                 {
-                    string line = string.Empty;
-                    while ((line = sr.ReadLine()) != null)
+                    
+                    while (sr.PeekChar()!=-1)
                     {
-                        if (!string.IsNullOrEmpty(line))
-                        {
-                            result.Add(line);
-                        }
+                        result.Add(sr.ReadString());
                     }
                 }
             }
@@ -35,11 +32,11 @@ namespace Pro03_20CT112_113.DataLayer.DatabaseType
                 File.Delete(path);
             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Write))
             {
-                using (StreamWriter sW = new StreamWriter(fs))
+                using (BinaryWriter sW = new BinaryWriter(fs))
                 {
                     foreach (string item in vs)
                     {
-                        sW.WriteLine(item);
+                        sW.Write(item);
                     }
                 }
             }

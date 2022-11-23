@@ -11,7 +11,7 @@ namespace Pro03_20CT112_113.DataLayer.DatabaseType
     {
         public List<string> ReadFile(string path)
         {
-            List<string> result = null;
+            List<string> result = new List<string>();
             using(FileStream fs=new FileStream(path,FileMode.Open,FileAccess.Read,FileShare.Read))
             {
                 using(StreamReader sr=new StreamReader(fs))
