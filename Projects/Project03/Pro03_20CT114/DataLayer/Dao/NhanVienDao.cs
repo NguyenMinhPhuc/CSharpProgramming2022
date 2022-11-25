@@ -1,4 +1,5 @@
-﻿using Pro03_20CT114.DataLayer.Entity;
+﻿using Pro03_20CT114.DataLayer.DatabaseType;
+using Pro03_20CT114.DataLayer.Entity;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,33 +11,40 @@ namespace Pro03_20CT114.DataLayer.Dao
 {
    public class NhanVienDao
     {
+        Database database;
+        public NhanVienDao(TypeDatabase type)
+        {
+            database = new Database(type);
+        }
         public List<NhanVien> GetDanhSachNhanVien(string path)
         {
-            List<NhanVien> nhanViens = null;
-            using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read))
+            List<NhanVien> nhanViens = new List<NhanVien>();
+            List<string> listString = new List<string>();
+            listString = database.DatabaseFac.Connect.DocFile(path);
+            NhanVien nhanVien;
+            foreach (string item in listString)
             {
-                using (StreamReader sr = new StreamReader(fs))
+                string[] vs = item.Split(',');
+                nhanVien = new NhanVien()
                 {
-                    string line = string.Empty;
-                    NhanVien nhanVien;
-                    nhanViens = new List<NhanVien>();
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        if (!string.IsNullOrEmpty(line))
-                        {
-                            string[] vs = line.Split(',');
-                            nhanVien = new NhanVien()
-                            {
-                                MaNhanVien = vs[0],
-                                TenNhanVien = vs[1],
-                                PhongBan = vs[2]
-                            };
-                            nhanViens.Add(nhanVien);
-                        }
-                    }
-                }
+                    MaNhanVien = vs[0],
+                    TenNhanVien = vs[1],
+                    PhongBan = vs[2]
+                };
+                nhanViens.Add(nhanVien);
             }
             return nhanViens;
+        }
+        
+        public void GhiNhanVienBinary(string path,List<NhanVien> nhanViens)
+        {
+            database = new Database(TypeDatabase.BINARY);
+            List<string> vs = new List<string>();
+            foreach (NhanVien item in nhanViens)
+            {
+                vs.Add(string.Format("{0},{1},{2}", item.MaNhanVien,item.TenNhanVien,item.PhongBan));
+            }
+            database.DatabaseFac.Connect.GhiFile(path, vs);
         }
     }
 }

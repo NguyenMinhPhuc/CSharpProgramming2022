@@ -36,7 +36,7 @@ namespace Pro03_20CT111_QuaySo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(605, 322);
             this.Name = "Frm_QuanLyDanhSach_Modifies";
             this.Text = "Frm_QuanLyDanhSach_Modifies";
             this.ResumeLayout(false);

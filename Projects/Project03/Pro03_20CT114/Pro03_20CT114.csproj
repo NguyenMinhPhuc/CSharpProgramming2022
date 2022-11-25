@@ -47,7 +47,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BussinessLayer\BLL_NhanVien.cs" />
+    <Compile Include="ClsMain.cs" />
     <Compile Include="DataLayer\Dao\NhanVienDao.cs" />
+    <Compile Include="DataLayer\DatabaseType\Database.cs" />
+    <Compile Include="DataLayer\DatabaseType\DatabaseConnectWithBinary.cs" />
+    <Compile Include="DataLayer\DatabaseType\DatabaseConnectWithSQL.cs" />
+    <Compile Include="DataLayer\DatabaseType\DatabaseFactory.cs" />
+    <Compile Include="DataLayer\DatabaseType\DataConnectWithINI.cs" />
+    <Compile Include="DataLayer\DatabaseType\IDatabaseConnect.cs" />
+    <Compile Include="DataLayer\DatabaseType\IDatabaseConnectFactory.cs" />
+    <Compile Include="DataLayer\DatabaseType\TypeDatabase.cs" />
     <Compile Include="DataLayer\Entity\GiaiThuong.cs" />
     <Compile Include="DataLayer\Entity\NhanVien.cs" />
     <Compile Include="DataLayer\Entity\NhanVienNhanGiai.cs" />
