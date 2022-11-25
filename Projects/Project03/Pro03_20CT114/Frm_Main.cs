@@ -1,4 +1,5 @@
 ﻿using Pro03_20CT114.BussinessLayer;
+using Pro03_20CT114.DataLayer.DatabaseType;
 using Pro03_20CT114.DataLayer.Entity;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,7 @@ namespace Pro03_20CT114
         int indexColor = 0;
         private void Frm_Main_Load(object sender, EventArgs e)
         {
-            bd = new BLL_NhanVien();
+            bd = new BLL_NhanVien(ClsMain.type);
             nhanViens = new List<NhanVien>();
         }
 
@@ -172,6 +173,36 @@ namespace Pro03_20CT114
             NhanVien nhanVien = LayNhanVienTheoMaNhanVien(dgvDanhSachNhanVien.CurrentRow.Cells["colMaNhanVien"].Value.ToString());
             nhanViens.Remove(nhanVien);
             LoadNhanVien();
+        }
+
+        private void btnBinary_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "";
+            saveFileDialog.DefaultExt = "dat";
+            saveFileDialog.Title = "Lưu danh sách trúng thường";
+            saveFileDialog.InitialDirectory = @"D:\";
+            saveFileDialog.AddExtension = true;
+            saveFileDialog.FileName = string.Format("{0:0000}{1:00}{2:00}_{3}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, "GiaiThuong");
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                bd.GhiFileNhiPhan(saveFileDialog.FileName, nhanViens);
+
+            }
+           
+        }
+
+        private void rdoini_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rdoini.Checked)
+            {
+                ClsMain.type = TypeDatabase.INI;
+            }
+            else
+            {
+                ClsMain.type = TypeDatabase.BINARY;
+            }
+            bd = new BLL_NhanVien(ClsMain.type);
         }
     }
 }
