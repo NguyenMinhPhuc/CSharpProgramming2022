@@ -1,4 +1,6 @@
 ﻿using Pro03_20CT111_QuaySo.BusinessLayer;
+using Pro03_20CT111_QuaySo.Commons;
+using Pro03_20CT111_QuaySo.DataLayer.DatabaseType;
 using Pro03_20CT111_QuaySo.DataLayer.Entity;
 using System;
 using System.Collections.Generic;
@@ -16,15 +18,18 @@ namespace Pro03_20CT111_QuaySo
     {
         public Frm_Main()
         {
+          
             InitializeComponent();
         }
         BLL_NhanVien bLL_NhanVien;
         List<NhanVien> nhanViens;
         private void Frm_Main_Load(object sender, EventArgs e)
         {
-            bLL_NhanVien = new BLL_NhanVien();
+            rdoini.Checked = true;
+            bLL_NhanVien = new BLL_NhanVien(ClsMain.dataType);
             nhanViens = new List<NhanVien>();
             LoadCboGiaiThuong();
+
         }
 
         private void LoadCboGiaiThuong()
@@ -164,6 +169,31 @@ namespace Pro03_20CT111_QuaySo
             if(saveFileDialog.ShowDialog()==DialogResult.OK)
             {
                 bLL_NhanVien.GhiDanhSachTrungGiai(saveFileDialog.FileName, nhanVienNhanGiais);
+            }
+        }
+
+        private void rdoini_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rdoini.Checked)
+            {
+                ClsMain.dataType = DataType.INI;
+                bLL_NhanVien = new BLL_NhanVien(ClsMain.dataType);
+            }
+            else
+            {
+                ClsMain.dataType = DataType.BINARY;
+                bLL_NhanVien = new BLL_NhanVien(ClsMain.dataType);
+            }
+        }
+
+        private void btnXuatExcel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.DefaultExt = "xls";
+            saveFileDialog.InitialDirectory = "D:\\";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                ExportExcel.ExportExcelByInterop(saveFileDialog.FileName, dgvNhanVienNhanGiai, 1, "Arial", 16, 12);
             }
         }
     }

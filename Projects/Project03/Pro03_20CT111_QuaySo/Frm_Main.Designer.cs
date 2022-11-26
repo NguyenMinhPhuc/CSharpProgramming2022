@@ -30,11 +30,12 @@ namespace Pro03_20CT111_QuaySo
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXuatFileINI = new System.Windows.Forms.Button();
             this.btnChonDanhSach = new System.Windows.Forms.Button();
             this.btnXuatExcel = new System.Windows.Forms.Button();
             this.btnBatDau = new System.Windows.Forms.Button();
@@ -59,7 +60,8 @@ namespace Pro03_20CT111_QuaySo
             this.lblN3 = new System.Windows.Forms.Label();
             this.lblN5 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnXuatFileINI = new System.Windows.Forms.Button();
+            this.rdoini = new System.Windows.Forms.RadioButton();
+            this.rdoBinary = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -70,6 +72,8 @@ namespace Pro03_20CT111_QuaySo
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.rdoBinary);
+            this.panel1.Controls.Add(this.rdoini);
             this.panel1.Controls.Add(this.btnXuatFileINI);
             this.panel1.Controls.Add(this.btnChonDanhSach);
             this.panel1.Controls.Add(this.btnXuatExcel);
@@ -81,6 +85,22 @@ namespace Pro03_20CT111_QuaySo
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1366, 94);
             this.panel1.TabIndex = 0;
+            // 
+            // btnXuatFileINI
+            // 
+            this.btnXuatFileINI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnXuatFileINI.FlatAppearance.BorderSize = 0;
+            this.btnXuatFileINI.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnXuatFileINI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuatFileINI.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuatFileINI.ForeColor = System.Drawing.Color.White;
+            this.btnXuatFileINI.Location = new System.Drawing.Point(790, 30);
+            this.btnXuatFileINI.Name = "btnXuatFileINI";
+            this.btnXuatFileINI.Size = new System.Drawing.Size(188, 37);
+            this.btnXuatFileINI.TabIndex = 5;
+            this.btnXuatFileINI.Text = "Xuất INI";
+            this.btnXuatFileINI.UseVisualStyleBackColor = false;
+            this.btnXuatFileINI.Click += new System.EventHandler(this.btnXuatFileINI_Click);
             // 
             // btnChonDanhSach
             // 
@@ -112,6 +132,7 @@ namespace Pro03_20CT111_QuaySo
             this.btnXuatExcel.TabIndex = 3;
             this.btnXuatExcel.Text = "Xuất Excel";
             this.btnXuatExcel.UseVisualStyleBackColor = false;
+            this.btnXuatExcel.Click += new System.EventHandler(this.btnXuatExcel_Click);
             // 
             // btnBatDau
             // 
@@ -180,17 +201,17 @@ namespace Pro03_20CT111_QuaySo
             // 
             this.dgvNhanVien.AllowUserToAddRows = false;
             this.dgvNhanVien.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvNhanVien.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaNhanVien,
@@ -244,17 +265,17 @@ namespace Pro03_20CT111_QuaySo
             // 
             this.dgvNhanVienNhanGiai.AllowUserToAddRows = false;
             this.dgvNhanVienNhanGiai.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvNhanVienNhanGiai.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgvNhanVienNhanGiai.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvNhanVienNhanGiai.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNhanVienNhanGiai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNhanVienNhanGiai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvNhanVienNhanGiai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVienNhanGiai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -357,21 +378,28 @@ namespace Pro03_20CT111_QuaySo
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnXuatFileINI
+            // rdoini
             // 
-            this.btnXuatFileINI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnXuatFileINI.FlatAppearance.BorderSize = 0;
-            this.btnXuatFileINI.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnXuatFileINI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXuatFileINI.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatFileINI.ForeColor = System.Drawing.Color.White;
-            this.btnXuatFileINI.Location = new System.Drawing.Point(790, 30);
-            this.btnXuatFileINI.Name = "btnXuatFileINI";
-            this.btnXuatFileINI.Size = new System.Drawing.Size(188, 37);
-            this.btnXuatFileINI.TabIndex = 5;
-            this.btnXuatFileINI.Text = "Xuất INI";
-            this.btnXuatFileINI.UseVisualStyleBackColor = false;
-            this.btnXuatFileINI.Click += new System.EventHandler(this.btnXuatFileINI_Click);
+            this.rdoini.AutoSize = true;
+            this.rdoini.Checked = true;
+            this.rdoini.Location = new System.Drawing.Point(1221, 29);
+            this.rdoini.Name = "rdoini";
+            this.rdoini.Size = new System.Drawing.Size(35, 17);
+            this.rdoini.TabIndex = 6;
+            this.rdoini.TabStop = true;
+            this.rdoini.Text = "ini";
+            this.rdoini.UseVisualStyleBackColor = true;
+            this.rdoini.CheckedChanged += new System.EventHandler(this.rdoini_CheckedChanged);
+            // 
+            // rdoBinary
+            // 
+            this.rdoBinary.AutoSize = true;
+            this.rdoBinary.Location = new System.Drawing.Point(1220, 52);
+            this.rdoBinary.Name = "rdoBinary";
+            this.rdoBinary.Size = new System.Drawing.Size(53, 17);
+            this.rdoBinary.TabIndex = 7;
+            this.rdoBinary.Text = "binary";
+            this.rdoBinary.UseVisualStyleBackColor = true;
             // 
             // Frm_Main
             // 
@@ -431,6 +459,8 @@ namespace Pro03_20CT111_QuaySo
         private System.Windows.Forms.DataGridViewTextBoxColumn colGiaiThuong;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnXuatFileINI;
+        private System.Windows.Forms.RadioButton rdoBinary;
+        private System.Windows.Forms.RadioButton rdoini;
     }
 }
 
