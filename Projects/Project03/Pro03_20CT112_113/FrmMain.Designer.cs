@@ -30,10 +30,10 @@ namespace Pro03_20CT112_113
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +45,9 @@ namespace Pro03_20CT112_113
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLuuNhanVienTrungThuong = new System.Windows.Forms.Button();
+            this.rdoIni = new System.Windows.Forms.RadioButton();
+            this.rdotext = new System.Windows.Forms.RadioButton();
             this.btnChooseList = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
@@ -57,6 +60,10 @@ namespace Pro03_20CT112_113
             this.colPhongBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvNhanVienTrungThuong = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGiaiThuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblN5 = new System.Windows.Forms.Label();
             this.lblN4 = new System.Windows.Forms.Label();
@@ -64,13 +71,6 @@ namespace Pro03_20CT112_113
             this.lblN2 = new System.Windows.Forms.Label();
             this.lblN1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.rdotext = new System.Windows.Forms.RadioButton();
-            this.rdoIni = new System.Windows.Forms.RadioButton();
-            this.btnLuuNhanVienTrungThuong = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGiaiThuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -175,6 +175,39 @@ namespace Pro03_20CT112_113
             this.panel1.Size = new System.Drawing.Size(1369, 70);
             this.panel1.TabIndex = 2;
             // 
+            // btnLuuNhanVienTrungThuong
+            // 
+            this.btnLuuNhanVienTrungThuong.Location = new System.Drawing.Point(1235, 16);
+            this.btnLuuNhanVienTrungThuong.Name = "btnLuuNhanVienTrungThuong";
+            this.btnLuuNhanVienTrungThuong.Size = new System.Drawing.Size(122, 38);
+            this.btnLuuNhanVienTrungThuong.TabIndex = 7;
+            this.btnLuuNhanVienTrungThuong.Text = "Luu file";
+            this.btnLuuNhanVienTrungThuong.UseVisualStyleBackColor = true;
+            this.btnLuuNhanVienTrungThuong.Click += new System.EventHandler(this.btnLuuNhanVienTrungThuong_Click);
+            // 
+            // rdoIni
+            // 
+            this.rdoIni.AutoSize = true;
+            this.rdoIni.Checked = true;
+            this.rdoIni.Location = new System.Drawing.Point(1163, 37);
+            this.rdoIni.Name = "rdoIni";
+            this.rdoIni.Size = new System.Drawing.Size(35, 17);
+            this.rdoIni.TabIndex = 6;
+            this.rdoIni.TabStop = true;
+            this.rdoIni.Text = "ini";
+            this.rdoIni.UseVisualStyleBackColor = true;
+            this.rdoIni.CheckedChanged += new System.EventHandler(this.rdoIni_CheckedChanged);
+            // 
+            // rdotext
+            // 
+            this.rdotext.AutoSize = true;
+            this.rdotext.Location = new System.Drawing.Point(1163, 16);
+            this.rdotext.Name = "rdotext";
+            this.rdotext.Size = new System.Drawing.Size(42, 17);
+            this.rdotext.TabIndex = 5;
+            this.rdotext.Text = "text";
+            this.rdotext.UseVisualStyleBackColor = true;
+            // 
             // btnChooseList
             // 
             this.btnChooseList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -205,6 +238,7 @@ namespace Pro03_20CT112_113
             this.button2.TabIndex = 3;
             this.button2.Text = "Expport Excel";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnStart
             // 
@@ -262,17 +296,17 @@ namespace Pro03_20CT112_113
             // 
             this.dgvEmployee.AllowUserToAddRows = false;
             this.dgvEmployee.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEmployee.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaNhanVien,
@@ -327,17 +361,17 @@ namespace Pro03_20CT112_113
             // 
             this.dgvNhanVienTrungThuong.AllowUserToAddRows = false;
             this.dgvNhanVienTrungThuong.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvNhanVienTrungThuong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvNhanVienTrungThuong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvNhanVienTrungThuong.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNhanVienTrungThuong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNhanVienTrungThuong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvNhanVienTrungThuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVienTrungThuong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -353,6 +387,38 @@ namespace Pro03_20CT112_113
             this.dgvNhanVienTrungThuong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNhanVienTrungThuong.Size = new System.Drawing.Size(895, 217);
             this.dgvNhanVienTrungThuong.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "EmpID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "EmpName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Department";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Factory";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 150;
+            // 
+            // colGiaiThuong
+            // 
+            this.colGiaiThuong.DataPropertyName = "GiaiThuong";
+            this.colGiaiThuong.HeaderText = "Gift";
+            this.colGiaiThuong.Name = "colGiaiThuong";
+            this.colGiaiThuong.ReadOnly = true;
+            this.colGiaiThuong.Width = 200;
             // 
             // panel2
             // 
@@ -437,71 +503,6 @@ namespace Pro03_20CT112_113
             // 
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // rdotext
-            // 
-            this.rdotext.AutoSize = true;
-            this.rdotext.Location = new System.Drawing.Point(1163, 16);
-            this.rdotext.Name = "rdotext";
-            this.rdotext.Size = new System.Drawing.Size(42, 17);
-            this.rdotext.TabIndex = 5;
-            this.rdotext.Text = "text";
-            this.rdotext.UseVisualStyleBackColor = true;
-            // 
-            // rdoIni
-            // 
-            this.rdoIni.AutoSize = true;
-            this.rdoIni.Checked = true;
-            this.rdoIni.Location = new System.Drawing.Point(1163, 37);
-            this.rdoIni.Name = "rdoIni";
-            this.rdoIni.Size = new System.Drawing.Size(35, 17);
-            this.rdoIni.TabIndex = 6;
-            this.rdoIni.TabStop = true;
-            this.rdoIni.Text = "ini";
-            this.rdoIni.UseVisualStyleBackColor = true;
-            this.rdoIni.CheckedChanged += new System.EventHandler(this.rdoIni_CheckedChanged);
-            // 
-            // btnLuuNhanVienTrungThuong
-            // 
-            this.btnLuuNhanVienTrungThuong.Location = new System.Drawing.Point(1235, 16);
-            this.btnLuuNhanVienTrungThuong.Name = "btnLuuNhanVienTrungThuong";
-            this.btnLuuNhanVienTrungThuong.Size = new System.Drawing.Size(122, 38);
-            this.btnLuuNhanVienTrungThuong.TabIndex = 7;
-            this.btnLuuNhanVienTrungThuong.Text = "Luu file";
-            this.btnLuuNhanVienTrungThuong.UseVisualStyleBackColor = true;
-            this.btnLuuNhanVienTrungThuong.Click += new System.EventHandler(this.btnLuuNhanVienTrungThuong_Click);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "EmpID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "EmpName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Department";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Factory";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // colGiaiThuong
-            // 
-            this.colGiaiThuong.DataPropertyName = "GiaiThuong";
-            this.colGiaiThuong.HeaderText = "Gift";
-            this.colGiaiThuong.Name = "colGiaiThuong";
-            this.colGiaiThuong.ReadOnly = true;
-            this.colGiaiThuong.Width = 200;
             // 
             // timer2
             // 
