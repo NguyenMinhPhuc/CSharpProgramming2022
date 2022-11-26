@@ -1,4 +1,5 @@
-﻿using Pro03_20CT111_QuaySo.DataLayer.Entity;
+﻿using Pro03_20CT111_QuaySo.DataLayer.DatabaseType;
+using Pro03_20CT111_QuaySo.DataLayer.Entity;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,48 +11,44 @@ namespace Pro03_20CT111_QuaySo.DataLayer.Dao
 {
     public class NhanVienDao
     {
-        //Read
+        private Database database;
+        public NhanVienDao(DataType type)
+        {
+            database = new Database(type);
+        }
+
         public List<NhanVien> LayDanhSachNhanVien(string path)
         {
+            List<string> listString = new List<string>();
+            listString = database.DatabaseFac.Connect.ReadFile(path);
             List<NhanVien> nhanViens = new List<NhanVien>();
-            using (FileStream fs=new FileStream(path,FileMode.Open,FileAccess.Read,FileShare.Read))
+            NhanVien nhanVien;
+            foreach (string item in listString)
             {
-                using (StreamReader sr=new StreamReader(fs))
-                {
-                    string line = string.Empty;
-                    NhanVien nhanVien;
-                    while ((line=sr.ReadLine())!=null)
-                    {
-                        if(!string.IsNullOrEmpty(line))
-                        {
-                            string[] vs = line.Split(',');
-                            nhanVien = new NhanVien();
-                            nhanVien.MaNhanVien = vs[0];
-                            nhanVien.TenNhanVien = vs[1];
-                            nhanVien.PhongBan = vs[2];
-                            nhanViens.Add(nhanVien);
-                        }
-                    }
-                }
+                nhanVien = new NhanVien();
+                string[] vs = item.Split(',');
+                nhanVien.MaNhanVien = vs[0];
+                nhanVien.TenNhanVien = vs[1];
+                nhanVien.PhongBan = vs[2];
+                nhanViens.Add(nhanVien);
             }
             return nhanViens;
         }
-        //write
 
-        public void GhiDanhSachTrungGiai(string path,List<NhanVienNhanGiai> nhanVienNhanGiais)
+        public void GhiDanhSachTrungGiai(string path, List<NhanVienNhanGiai> nhanVienNhanGiais)
         {
-            if (File.Exists(path))
-                File.Delete(path);
-            using(FileStream fs=new FileStream(path,FileMode.Create,FileAccess.Write,FileShare.Write))
+            List<string> listString = new List<string>();
+            string line = string.Empty;
+            foreach (NhanVienNhanGiai item in nhanVienNhanGiais)
             {
-                using(StreamWriter sw=new StreamWriter(fs))
-                {
-                    foreach (NhanVienNhanGiai item in nhanVienNhanGiais)
-                    {
-                        sw.WriteLine(item.ToString());
-                    }
-                }
+                line=string.Format("{0},{1},{2},{3}",item.MaNhanVien,item.TenNhanVien,item.PhongBan,item.TenGiaiThuong);
+                listString.Add(line);
             }
+            database.DatabaseFac.Connect.WriteFile(path, listString);
+        }
+        public void GhiDanhSachTrungGiai(string path, List<string> listString)
+        {
+            database.DatabaseFac.Connect.WriteFile(path, listString);
         }
     }
 }
