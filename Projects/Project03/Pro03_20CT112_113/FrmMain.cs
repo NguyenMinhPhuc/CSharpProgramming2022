@@ -1,4 +1,5 @@
 ﻿using Pro03_20CT112_113.BusinessLayer;
+using Pro03_20CT112_113.Commonts;
 using Pro03_20CT112_113.DataLayer.DatabaseType;
 using Pro03_20CT112_113.DataLayer.Entity;
 using System;
@@ -169,6 +170,17 @@ namespace Pro03_20CT112_113
             }
                 
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.DefaultExt = "xlsx";
+            saveFileDialog.InitialDirectory = "D:\\";
+            if(saveFileDialog.ShowDialog()==DialogResult.OK)
+            {
+                ExportExcel.ExportExcelByInterrop(saveFileDialog.FileName, dgvNhanVienTrungThuong, 1, "Tahama", 16, 12);
+            }
         }
     }
 }
