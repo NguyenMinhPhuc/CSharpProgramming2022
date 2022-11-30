@@ -30,10 +30,10 @@ namespace Pro03_20CT114
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +45,9 @@ namespace Pro03_20CT114
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rdoBinary = new System.Windows.Forms.RadioButton();
+            this.rdoini = new System.Windows.Forms.RadioButton();
+            this.btnBinary = new System.Windows.Forms.Button();
             this.cboGiaiThuong = new System.Windows.Forms.ComboBox();
             this.btnLayDanhSach = new System.Windows.Forms.Button();
             this.btnInDanhSach = new System.Windows.Forms.Button();
@@ -70,9 +73,6 @@ namespace Pro03_20CT114
             this.lblN3 = new System.Windows.Forms.Label();
             this.lblN5 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnBinary = new System.Windows.Forms.Button();
-            this.rdoini = new System.Windows.Forms.RadioButton();
-            this.rdoBinary = new System.Windows.Forms.RadioButton();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -164,6 +164,7 @@ namespace Pro03_20CT114
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.rdoBinary);
             this.panel1.Controls.Add(this.rdoini);
             this.panel1.Controls.Add(this.btnBinary);
@@ -176,6 +177,40 @@ namespace Pro03_20CT114
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1464, 55);
             this.panel1.TabIndex = 2;
+            // 
+            // rdoBinary
+            // 
+            this.rdoBinary.AutoSize = true;
+            this.rdoBinary.Location = new System.Drawing.Point(1149, 8);
+            this.rdoBinary.Name = "rdoBinary";
+            this.rdoBinary.Size = new System.Drawing.Size(98, 33);
+            this.rdoBinary.TabIndex = 6;
+            this.rdoBinary.TabStop = true;
+            this.rdoBinary.Text = "Binary";
+            this.rdoBinary.UseVisualStyleBackColor = true;
+            // 
+            // rdoini
+            // 
+            this.rdoini.AutoSize = true;
+            this.rdoini.Checked = true;
+            this.rdoini.Location = new System.Drawing.Point(1071, 8);
+            this.rdoini.Name = "rdoini";
+            this.rdoini.Size = new System.Drawing.Size(61, 33);
+            this.rdoini.TabIndex = 5;
+            this.rdoini.TabStop = true;
+            this.rdoini.Text = "INI";
+            this.rdoini.UseVisualStyleBackColor = true;
+            this.rdoini.CheckedChanged += new System.EventHandler(this.rdoini_CheckedChanged);
+            // 
+            // btnBinary
+            // 
+            this.btnBinary.Location = new System.Drawing.Point(1335, 9);
+            this.btnBinary.Name = "btnBinary";
+            this.btnBinary.Size = new System.Drawing.Size(117, 37);
+            this.btnBinary.TabIndex = 4;
+            this.btnBinary.Text = "Binary";
+            this.btnBinary.UseVisualStyleBackColor = true;
+            this.btnBinary.Click += new System.EventHandler(this.btnBinary_Click);
             // 
             // cboGiaiThuong
             // 
@@ -259,17 +294,17 @@ namespace Pro03_20CT114
             // 
             this.dgvDanhSachNhanVien.AllowUserToAddRows = false;
             this.dgvDanhSachNhanVien.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvDanhSachNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDanhSachNhanVien.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDanhSachNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDanhSachNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDanhSachNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaNhanVien,
@@ -321,7 +356,6 @@ namespace Pro03_20CT114
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.dgvNhanVienNhanGiai);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -333,7 +367,7 @@ namespace Pro03_20CT114
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(863, 0);
+            this.btnSave.Location = new System.Drawing.Point(1254, 10);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 36);
             this.btnSave.TabIndex = 2;
@@ -345,17 +379,17 @@ namespace Pro03_20CT114
             // 
             this.dgvNhanVienNhanGiai.AllowUserToAddRows = false;
             this.dgvNhanVienNhanGiai.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvNhanVienNhanGiai.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvNhanVienNhanGiai.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvNhanVienNhanGiai.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNhanVienNhanGiai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNhanVienNhanGiai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvNhanVienNhanGiai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhanVienNhanGiai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -491,40 +525,6 @@ namespace Pro03_20CT114
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnBinary
-            // 
-            this.btnBinary.Location = new System.Drawing.Point(1294, 8);
-            this.btnBinary.Name = "btnBinary";
-            this.btnBinary.Size = new System.Drawing.Size(117, 37);
-            this.btnBinary.TabIndex = 4;
-            this.btnBinary.Text = "Binary";
-            this.btnBinary.UseVisualStyleBackColor = true;
-            this.btnBinary.Click += new System.EventHandler(this.btnBinary_Click);
-            // 
-            // rdoini
-            // 
-            this.rdoini.AutoSize = true;
-            this.rdoini.Checked = true;
-            this.rdoini.Location = new System.Drawing.Point(1071, 8);
-            this.rdoini.Name = "rdoini";
-            this.rdoini.Size = new System.Drawing.Size(61, 33);
-            this.rdoini.TabIndex = 5;
-            this.rdoini.TabStop = true;
-            this.rdoini.Text = "INI";
-            this.rdoini.UseVisualStyleBackColor = true;
-            this.rdoini.CheckedChanged += new System.EventHandler(this.rdoini_CheckedChanged);
-            // 
-            // rdoBinary
-            // 
-            this.rdoBinary.AutoSize = true;
-            this.rdoBinary.Location = new System.Drawing.Point(1149, 8);
-            this.rdoBinary.Name = "rdoBinary";
-            this.rdoBinary.Size = new System.Drawing.Size(98, 33);
-            this.rdoBinary.TabIndex = 6;
-            this.rdoBinary.TabStop = true;
-            this.rdoBinary.Text = "Binary";
-            this.rdoBinary.UseVisualStyleBackColor = true;
             // 
             // Frm_Main
             // 

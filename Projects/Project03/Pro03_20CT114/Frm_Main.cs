@@ -1,4 +1,5 @@
-﻿using Pro03_20CT114.BussinessLayer;
+﻿using Commons;
+using Pro03_20CT114.BussinessLayer;
 using Pro03_20CT114.DataLayer.DatabaseType;
 using Pro03_20CT114.DataLayer.Entity;
 using System;
@@ -155,15 +156,24 @@ namespace Pro03_20CT114
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "";
-            saveFileDialog.DefaultExt = "ini";
+            saveFileDialog.DefaultExt = "xlsx";
             saveFileDialog.Title = "Lưu danh sách trúng thường";
             saveFileDialog.InitialDirectory=@"D:\";
             saveFileDialog.AddExtension = true;
             saveFileDialog.FileName = string.Format("{0:0000}{1:00}{2:00}_{3}", DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, "GiaiThuong");
-            if(saveFileDialog.ShowDialog()==DialogResult.OK)
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                //Lưu file
-                MessageBox.Show(saveFileDialog.FileName);
+                try
+                {
+                    MyExportExcel.ExportExcel(saveFileDialog.FileName, dgvNhanVienNhanGiai, "Danh sach nhan vien nhan giai", 1, "Arial", 16, 11);
+                    MessageBox.Show("Thanh cong");
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+
 
             }    
         }
